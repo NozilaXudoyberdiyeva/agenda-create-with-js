@@ -25,6 +25,6 @@ elForm.addEventListener("submit", function(evt){
         }else{
             newLine.classList.add("alert-danger");
             newLine.classList.remove("alert-dark", "text-decoration-line-through");
-        }
-    })
+        };
+    });
 });
