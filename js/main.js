@@ -9,7 +9,7 @@ elForm.addEventListener("submit", function(evt){
     let newCheckBox = document.createElement("input");
 
     newLine.classList.add("alert", "alert-danger", "d-flex", "justify-content-between");
-    newLine.textContent = elFormInput.value;
+    newLine.textContent = elFormInput.value.trim();
 
     newCheckBox.setAttribute("type", "checkbox");
     newCheckBox.classList.add("form-check-input");
@@ -18,7 +18,7 @@ elForm.addEventListener("submit", function(evt){
     elCardBody.appendChild(newLine);
     elFormInput.value = "";
 
-    newCheckBox.addEventListener("change", function(evt){
+    newCheckBox.addEventListener("click", function(){
         if(newCheckBox.checked){
             newLine.classList.remove("alert-danger");
             newLine.classList.add("alert-dark", "text-decoration-line-through");
